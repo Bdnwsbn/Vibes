@@ -12,9 +12,10 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var prevBtn: UIButton!
     
-    var questionCount = 1
+    var questionCount = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        prevBtn.isEnabled = false
         
     }
 
@@ -40,8 +43,6 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         cell.answerLabel.text = answerArray[questionCount][indexPath.row]
 
-        print(answerArray[questionCount][indexPath.row])
-        
         return cell
     }
     
@@ -49,20 +50,32 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func nextBtn(_ sender: Any) {
         if questionCount < 5 {
             questionCount += 1
-            updateQsAndAs(questionCount: questionCount - 1)
+            updateQsAndAs(questionCount: questionCount)
         }
     }
 
     @IBAction func prevBtn(_ sender: Any) {
-        if questionCount != 1 {
+        if questionCount > 0 {
             questionCount -= 1
-            updateQsAndAs(questionCount: questionCount - 1)
+            updateQsAndAs(questionCount: questionCount)
         }
     }
     
     func updateQsAndAs(questionCount: Int) {
         questionLabel.text = questionArray[questionCount]
-        tableView.reloadData() 
+        tableView.reloadData()
+        
+        if questionCount == 0 {
+            prevBtn.isEnabled = false
+        } else {
+            prevBtn.isEnabled = true
+        }
+        
+        if questionCount == 4 {
+            nextBtn.isEnabled = false
+        } else {
+            nextBtn.isEnabled = true
+        }
     }
     
 }
