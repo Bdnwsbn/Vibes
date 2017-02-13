@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+// All of these constants thus far will eventually come from an API service
+
 // Question Constants
 let question1 = "What type of Vibe are you looking for?"
 let question2 = "What type of venue would you prefer?"
@@ -23,4 +26,6 @@ let q2Answers = ["Bar", "Club", "Music Venue", "Performance", "Brewery", "Sports
 let q3Answers = ["Yes", "No"]
 let q4Answers = ["Doesn't matter", "Dirt cheap", "Cheap", "Average (for the area)", "Fancy", "Wear a fucking suit", "Had to sacrifice a lamb for this drink"]
 let q5Answers = ["Fuck you, bring the drink to me (0-1 miles)", "As far as I can roll out of bed (1-3 miles)", "Fine, I'll walk a bit (3-10)", "Hope this Uber driver knows where he's going (10-20) miles", "I live in bumfuck nowhere save me please (20-50 miles)", "I have a problem, and drinking is the solution (50+ miles)"]
+
+let answerArray = [q1Answers, q2Answers, q3Answers, q4Answers, q5Answers]
 
