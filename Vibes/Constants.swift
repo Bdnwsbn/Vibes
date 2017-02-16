@@ -25,7 +25,7 @@ let q1Answers = ["Rage", "Chill", "Romantic", "Low Key", "College", "Mystery", "
 let q2Answers = ["Bar", "Club", "Music Venue", "Performance", "Brewery", "Sports Bar", "Strip Club"]
 let q3Answers = ["Yes", "No"]
 let q4Answers = ["Doesn't matter", "Dirt cheap", "Cheap", "Average (for the area)", "Fancy", "Wear a fucking suit", "Had to sacrifice a lamb for this drink"]
-let q5Answers = ["Fuck you, bring the drink to me (0-1 miles)", "As far as I can roll out of bed (1-3 miles)", "Fine, I'll walk a bit (3-10)", "Hope this Uber driver knows where he's going (10-20) miles", "I live in bumfuck nowhere save me please (20-50 miles)", "I have a problem, and drinking is the solution (50+ miles)"]
+let q5Answers = ["Fuck you, bring the drink to me (1 mi)", "As far as I can roll out of bed (3 mi)", "Fine, I'll walk a bit (10 mi)", "Hope this Uber driver knows where he's going (20 mi)", "I live in bumfuck nowhere save me please (50 mi)", "I have a problem, and drinking is the solution (50+ mi)"]
 
 let answerArray = [q1Answers, q2Answers, q3Answers, q4Answers, q5Answers]
 

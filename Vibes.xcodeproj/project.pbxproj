@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8900FE5D1E54069B00F739D8 /* ResultsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8900FE5C1E54069B00F739D8 /* ResultsEngine.swift */; };
+		8900FE5F1E540F3A00F739D8 /* Establishment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8900FE5E1E540F3A00F739D8 /* Establishment.swift */; };
+		8900FE651E5413F900F739D8 /* BarData.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8900FE641E5413F900F739D8 /* BarData.rtf */; };
 		892B3A5D1E4AC06B009AB127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B3A5C1E4AC06B009AB127 /* AppDelegate.swift */; };
 		892B3A5F1E4AC06B009AB127 /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B3A5E1E4AC06B009AB127 /* QuestionVC.swift */; };
 		892B3A621E4AC06B009AB127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892B3A601E4AC06B009AB127 /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8900FE5C1E54069B00F739D8 /* ResultsEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsEngine.swift; sourceTree = "<group>"; };
+		8900FE5E1E540F3A00F739D8 /* Establishment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Establishment.swift; sourceTree = "<group>"; };
+		8900FE641E5413F900F739D8 /* BarData.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = BarData.rtf; sourceTree = "<group>"; };
 		892B3A591E4AC06B009AB127 /* Vibes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vibes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		892B3A5C1E4AC06B009AB127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		892B3A5E1E4AC06B009AB127 /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 				892B3A6B1E4AC06B009AB127 /* Info.plist */,
 				892B3A631E4AC06B009AB127 /* Vibes.xcdatamodeld */,
 				89EF7D101E512A19006133B8 /* AnswerCell.swift */,
+				8900FE5C1E54069B00F739D8 /* ResultsEngine.swift */,
+				8900FE5E1E540F3A00F739D8 /* Establishment.swift */,
+				8900FE641E5413F900F739D8 /* BarData.rtf */,
 			);
 			path = Vibes;
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8900FE651E5413F900F739D8 /* BarData.rtf in Resources */,
 				892B3A6A1E4AC06B009AB127 /* LaunchScreen.storyboard in Resources */,
 				892B3A671E4AC06B009AB127 /* Assets.xcassets in Resources */,
 				892B3A621E4AC06B009AB127 /* Main.storyboard in Resources */,
@@ -271,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8900FE5D1E54069B00F739D8 /* ResultsEngine.swift in Sources */,
+				8900FE5F1E540F3A00F739D8 /* Establishment.swift in Sources */,
 				892B3A5F1E4AC06B009AB127 /* QuestionVC.swift in Sources */,
 				892B3A651E4AC06B009AB127 /* Vibes.xcdatamodeld in Sources */,
 				892B3A5D1E4AC06B009AB127 /* AppDelegate.swift in Sources */,

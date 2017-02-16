@@ -14,9 +14,11 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var prevBtn: UIButton!
-    
-    var questionCount = 0
 
+    var questionCount = 0
+    // Array to hold user's answers to calculate the results
+    var resultsArray: [[String]]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,6 +27,8 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         
         prevBtn.isEnabled = false
+        
+       
         
     }
 
@@ -41,16 +45,24 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath) as! AnswerCell
 
+        if questionCount == 1 {
+            tableView.allowsMultipleSelection = true
+        } else {
+            tableView.allowsMultipleSelection = false
+        }
+        
         cell.answerLabel.text = answerArray[questionCount][indexPath.row]
 
         return cell
     }
     
-
+    // Button Functions also reponsible for updating questionCount
+    // as well as checking to see if they should be enabled/disabled
     @IBAction func nextBtn(_ sender: Any) {
         if questionCount < 5 {
             questionCount += 1
             updateQsAndAs(questionCount: questionCount)
+            enableButtons(questionCount: questionCount)
         }
     }
 
@@ -58,13 +70,23 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if questionCount > 0 {
             questionCount -= 1
             updateQsAndAs(questionCount: questionCount)
+            enableButtons(questionCount: questionCount)
         }
     }
     
+    
+    // Helper Functions ------------------------------------------------------
+    
+    // Func to update the Question based on questionCount 
+    // and calls to reload the tableView data to update the answers
     func updateQsAndAs(questionCount: Int) {
         questionLabel.text = questionArray[questionCount]
         tableView.reloadData()
         
+    }
+    
+    // Func to check if buttons should be enabled/disabled
+    func enableButtons(questionCount: Int) {
         if questionCount == 0 {
             prevBtn.isEnabled = false
         } else {
