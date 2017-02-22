@@ -18,6 +18,14 @@ class Establishment {
     var price: String
     var location: Int
     
+    init() {
+        self.name = ""
+        self.vibe = ""
+        self.venue = []
+        self.food = false
+        self.price = ""
+        self.location = 0
+    }
     
     init(name: String, vibe: String, venue: [String], food: Bool, price: String, location: Int) {
         self.name = name
@@ -26,6 +34,17 @@ class Establishment {
         self.food = food
         self.price = price
         self.location = location
+    }
+    
+    func printObj() {
+        print("Obj ----------------------------")
+        print(self.name)
+        print(self.vibe)
+        print(self.venue)
+        print(self.food)
+        print(self.price)
+        print(self.location)
+        print("--------------------------------")
     }
     
     
